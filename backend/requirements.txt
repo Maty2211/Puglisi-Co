@@ -1,0 +1,15 @@
+Django>=5.0,<6.0
+djangorestframework>=3.15
+django-cors-headers>=4.3
+
+# Base de datos (podés cambiarlo luego)
+psycopg2-binary>=2.9
+
+# Variables de entorno
+python-dotenv>=1.0
+
+# Servidor para producción
+gunicorn>=21.2
+
+# Seguridad y utilidades
+whitenoise>=6.6
