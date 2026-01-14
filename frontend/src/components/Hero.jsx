@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-6">
+    <section id="top" className="min-h-screen flex items-center justify-center px-6">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -18,8 +18,7 @@ function Hero() {
         </h1>
 
         <p className="mt-6 text-lg text-neutral-600 max-w-2xl mx-auto">
-          Transforme la liquidación de sueldos en un proceso eficiente,
-          claro y sin riesgos legales.
+          Transforme la liquidación de sueldos en un proceso eficiente, claro y alineado a la normativa vigente, evitando contingencias legales y sanciones.
         </p>
 
         <div className="mt-10 flex justify-center gap-4">

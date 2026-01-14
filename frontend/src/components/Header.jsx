@@ -5,9 +5,10 @@ function Header() {
     <header className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur border-b border-neutral-200">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo / Nombre */}
-        <div className="text-lg font-semibold tracking-tight">
+        <a href="#top" className="text-xl font-semibold cursor-pointer">
           Puglisi&Co
-        </div>
+        </a>
+
 
         {/* Navegación */}
         <nav className="hidden md:flex items-center gap-8 text-sm text-neutral-700">
@@ -23,9 +24,10 @@ function Header() {
         </nav>
 
         {/* CTA */}
-        <button className="px-4 py-2 rounded-lg bg-neutral-900 text-white text-sm hover:bg-neutral-800 transition">
+        <a href="#contacto" className="px-4 py-2 rounded-lg bg-neutral-900 text-white hover:bg-neutral-800 transition">
           Solicitar asesoramiento
-        </button>
+        </a>
+        
       </div>
     </header>
   );

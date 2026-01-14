@@ -5,21 +5,23 @@ export default function Footer() {
         
         <div>
           <p className="font-medium text-neutral-800">
-            Servicios Familia
+            Puglisi&Co
           </p>
           <p>
-            Consultoría en liquidación de sueldos y gestión de Recursos Humanos
+            Liquidación de sueldos, cumplimiento laboral y asesoramiento previsional
           </p>
+
         </div>
 
         <div className="text-neutral-500">
-          <p>Contacto: liquidohaberes@gmail.com</p>
+          <p>Mail: liquidohaberes@gmail.com</p>
+          <p>Teléfono: +54 221 656 1405</p>
           <p>Argentina</p>
         </div>
       </div>
 
       <div className="text-center text-xs text-neutral-500 py-4 border-t border-neutral-200">
-        © {new Date().getFullYear()} Servicios Familia. Todos los derechos reservados.
+        © {new Date().getFullYear()} Puglisi&Co. Todos los derechos reservados.
       </div>
     </footer>
   );
