@@ -10,6 +10,10 @@ ALLOWED_HOSTS = [h.strip() for h in ALLOWED_HOSTS if h.strip()]
 if not ALLOWED_HOSTS:
     ALLOWED_HOSTS = ["puglisi-co.onrender.com"]
 
+CORS_ALLOWED_ORIGINS = [
+    "https://puglisi-co-frontend.onrender.com",
+]
+
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
