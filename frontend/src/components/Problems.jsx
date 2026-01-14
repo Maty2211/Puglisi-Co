@@ -1,6 +1,6 @@
 function Problems() {
   const problems = [
-    "¿Teme que una inspección de AFIP o del Ministerio detecte errores en sus legajos?",
+    "¿Teme que una inspección de ARCA o del Ministerio detecte errores en sus legajos?",
     "¿El cálculo del Impuesto a las Ganancias de sus empleados es un conflicto constante?",
     "¿Siente que su estudio contable solo liquida sueldos pero no le advierte riesgos?",
     "¿Tiene dudas sobre si está aplicando correctamente el Convenio Colectivo correspondiente?",

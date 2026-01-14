@@ -7,15 +7,15 @@ class ContactMessageSerializer(serializers.ModelSerializer):
         fields = ["name", "email", "message"]
 
     def validate_name(self, value):
-        if len(value.strip()) < 3:
+        if len(value.strip()) < 2:
             raise serializers.ValidationError(
-                "El nombre debe tener al menos 3 caracteres."
+                "El nombre debe tener al menos 2 caracteres."
             )
         return value
 
     def validate_message(self, value):
         if len(value.strip()) < 10:
             raise serializers.ValidationError(
-                "La consulta es demasiado corta."
+                "El mensaje debe ser más descriptivo."
             )
         return value

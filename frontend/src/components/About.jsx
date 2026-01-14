@@ -25,7 +25,7 @@ function About() {
 
         <div className="flex justify-center">
           <div className="w-64 h-64 rounded-2xl bg-neutral-200 flex items-center justify-center text-neutral-500">
-            Foto profesional
+            <img src="../img/FotoPresentacion.jpg" alt="Foto presentacion" className="w-full h-full object-cover rounded-2xl" />
           </div>
         </div>
       </div>
