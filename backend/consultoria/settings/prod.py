@@ -5,7 +5,9 @@ DEBUG = False
 
 ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",")
 
-if not ALLOWED_HOSTS or ALLOWED_HOSTS == [""]:
+ALLOWED_HOSTS = [h.strip() for h in ALLOWED_HOSTS if h.strip()]
+
+if not ALLOWED_HOSTS:
     ALLOWED_HOSTS = ["puglisi-co.onrender.com"]
 
 DATABASES = {
