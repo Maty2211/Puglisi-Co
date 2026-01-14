@@ -1,5 +1,5 @@
-import os
 from .base import *
+import os
 
 DEBUG = False
 
@@ -11,8 +11,11 @@ if not ALLOWED_HOSTS:
     ALLOWED_HOSTS = ["puglisi-co.onrender.com"]
 
 CORS_ALLOWED_ORIGINS = [
-    "https://puglisi-co-frontend.onrender.com",
+    "https://puglisi-co-1.onrender.com",
 ]
+
+CORS_ALLOW_CREDENTIALS = True
+
 
 DATABASES = {
     "default": {
