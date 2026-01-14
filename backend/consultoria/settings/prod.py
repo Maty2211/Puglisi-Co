@@ -1,18 +1,20 @@
 from .base import *
+import os
 
-DEBUG = False
+DEBUG = os.getenv("DEBUG") == "True"
 
-ALLOWED_HOSTS = ["tudominio.com"]
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS").split(",")
 
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "consultora",
-        "USER": "consultora_user",
-        "PASSWORD": "consultora123",
-        "HOST": "localhost",
-        "PORT": "5432",
+        "NAME": os.getenv("DB_NAME"),
+        "USER": os.getenv("DB_USER"),
+        "PASSWORD": os.getenv("DB_PASSWORD"),
+        "HOST": os.getenv("DB_HOST"),
+        "PORT": os.getenv("DB_PORT"),
     }
 }
+
 
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"

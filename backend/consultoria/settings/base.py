@@ -1,11 +1,15 @@
 from pathlib import Path
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Build paths inside the project
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 
 # SECURITY
-SECRET_KEY = "django-insecure-dev-key"
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 
 # Application definition
@@ -82,5 +86,7 @@ USE_TZ = True
 
 # Static files
 STATIC_URL = "static/"
+STATIC_ROOT = BASE_DIR / "staticfiles"
+
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
