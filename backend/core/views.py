@@ -8,6 +8,7 @@ from .serializers import ContactMessageSerializer
 @api_view(["POST"])
 def contact(request):
     serializer = ContactMessageSerializer(data=request.data)
+    print("MAIL CONFIG:", settings.EMAIL_HOST_USER)
 
     if not serializer.is_valid():
         return Response(
