@@ -21,3 +21,7 @@ def contact(request):
         {"message": "Consulta recibida correctamente"},
         status=status.HTTP_201_CREATED,
     )
+
+@api_view(["GET"])
+def health(request):
+    return Response({"status": "ok"})

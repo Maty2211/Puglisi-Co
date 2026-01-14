@@ -1,9 +1,12 @@
-from .base import *
 import os
+from .base import *
 
-DEBUG = os.getenv("DEBUG") == "True"
+DEBUG = False
 
-ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS").split(",")
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",")
+
+if not ALLOWED_HOSTS or ALLOWED_HOSTS == [""]:
+    ALLOWED_HOSTS = ["puglisi-co.onrender.com"]
 
 DATABASES = {
     "default": {
