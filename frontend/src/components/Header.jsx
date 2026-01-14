@@ -1,10 +1,12 @@
-export default function Header() {
+
+
+function Header() {
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-white/80 backdrop-blur border-b border-neutral-200">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo / Nombre */}
         <div className="text-lg font-semibold tracking-tight">
-          Servicios Familia
+          Puglisi&Co
         </div>
 
         {/* Navegación */}
@@ -28,3 +30,5 @@ export default function Header() {
     </header>
   );
 }
+
+export default Header;
