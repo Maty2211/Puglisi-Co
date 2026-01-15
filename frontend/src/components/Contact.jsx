@@ -1,44 +1,10 @@
 import { useState } from "react";
-import api from "../services/api";
 
 function Contact() {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+  const [sent, setSent] = useState(false);
 
-  const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(false);
-  const [error, setError] = useState(null);
-
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-    setError(null); // limpia error al volver a escribir
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    setLoading(true);
-    setSuccess(false);
-    setError(null);
-
-    try {
-      await api.post("/contact/", form);
-      setSuccess(true);
-      setForm({ name: "", email: "", message: "" });
-    } catch (err) {
-      if (err.response && err.response.status === 400) {
-        setError("Por favor, complete todos los campos correctamente.");
-      } else {
-        setError(
-          "Ocurrió un error al enviar la consulta. Intente nuevamente más tarde."
-        );
-      }
-    } finally {
-      setLoading(false);
-    }
+  const handleSubmit = () => {
+    setSent(true);
   };
 
   return (
@@ -53,62 +19,49 @@ function Contact() {
         </p>
 
         <form
+          action="https://docs.google.com/forms/d/e/1FAIpQLScYXxKuvzTYTDqPH5sStGxRJuGYL9qqtDIqo2TnGLL_RWG_Iw/formResponse"
+          method="POST"
+          target="hidden_iframe"
           onSubmit={handleSubmit}
           className="bg-white p-8 rounded-2xl border border-neutral-200 space-y-6"
         >
           <input
-            name="name"
-            value={form.name}
-            onChange={handleChange}
-            placeholder="Nombre"
-            className="w-full rounded-lg border px-4 py-2"
+            type="email"
+            name="emailAddress"
+            placeholder="Email"
             required
+            className="w-full rounded-lg border px-4 py-2"
           />
 
           <input
-            name="email"
-            type="email"
-            value={form.email}
-            onChange={handleChange}
-            placeholder="Email"
-            className="w-full rounded-lg border px-4 py-2"
+            type="text"
+            name="entry.217037522"
+            placeholder="Nombre completo"
             required
+            className="w-full rounded-lg border px-4 py-2"
           />
 
           <textarea
-            name="message"
-            value={form.message}
-            onChange={handleChange}
-            rows="4"
+            name="entry.1469967194"
             placeholder="Consulta"
-            className="w-full rounded-lg border px-4 py-2"
             required
+            className="w-full rounded-lg border px-4 py-2"
           />
 
           <button
             type="submit"
-            disabled={loading}
-            className="w-full rounded-xl bg-neutral-900 py-3 text-white disabled:opacity-60"
+            className="w-full rounded-xl bg-neutral-900 py-3 text-white hover:bg-neutral-800 transition"
           >
-            {loading ? "Enviando..." : "Enviar consulta"}
+            Enviar consulta
           </button>
 
-          {success && (
+          {sent && (
             <p className="text-sm text-green-600 text-center">
-              Gracias por su consulta. Nos pondremos en contacto a la brevedad.
+              Gracias, recibimos tu consulta. Nos comunicaremos a la brevedad.
             </p>
           )}
-
-          {error && (
-            <p className="text-sm text-red-600 text-center">
-              {error}
-            </p>
-          )}
-
-          <p className="text-xs text-neutral-500 text-center">
-            Respondemos dentro de las 24/48 horas hábiles.
-          </p>
         </form>
+        <iframe name="hidden_iframe" style={{ display: "none" }} />
       </div>
     </section>
   );
