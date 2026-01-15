@@ -3,7 +3,7 @@ function Services() {
     {
       title: "Outsourcing de Payroll",
       description:
-        "Liquidación integral de sueldos para PyMEs de 10 a 50 empleados. Garantizamos puntualidad, precisión técnica y cumplimiento normativo en cada proceso.",
+        "Liquidación integral de sueldos para PyMEs. Garantizamos puntualidad, precisión técnica y cumplimiento normativo en cada proceso.",
     },
     {
       title: "Auditoría de Cumplimiento Laboral",
@@ -13,7 +13,7 @@ function Services() {
     {
       title: "Consultoría Especializada",
       description:
-        "Asesoramiento en Impuesto a las Ganancias (4ta categoría), regímenes especiales y acompañamiento profesional ante inspecciones de AFIP y organismos laborales.",
+        "Asesoramiento en Impuesto a las Ganancias (4ta categoría), regímenes especiales y acompañamiento profesional ante inspecciones de ARCA y organismos laborales.",
     },
   ];
 

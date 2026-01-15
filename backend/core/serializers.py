@@ -11,6 +11,7 @@ class ContactMessageSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError(
                 "El nombre debe tener al menos 2 caracteres."
             )
+
         return value
 
     def validate_message(self, value):
